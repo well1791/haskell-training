@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: a380f125d8ab3111e413dda97766996462cfb0adb777a6634037a15cee05c04d
+-- hash: 904ddfce8b73aafe8e39ae00e018ff2c983f066ee519e66eeeedaa5380d13cda
 
 name:           haskell-training
 version:        0.1.0.0
@@ -31,6 +31,10 @@ library
   build-depends:
       base >=4.7 && <5
   exposed-modules:
+      Instances.MultipleInstances
+      Instances.OrphanClass
+      Instances.OrphanInstance
+      Instances.OrphanType
       Lib
   other-modules:
       Paths_haskell_training
