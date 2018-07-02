@@ -24,6 +24,8 @@ dependencies:
 
 library:
   source-dirs: src
+  ghc-options:
+  - -Wall
 
 tests:
   haskell-training-test:
@@ -35,3 +37,4 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - haskell-training
+    - QuickCheck

@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 904ddfce8b73aafe8e39ae00e018ff2c983f066ee519e66eeeedaa5380d13cda
+-- hash: caaa2bffcb196052a4f112534f8687ee98d303b033a89518b9e88e5acc353dc6
 
 name:           haskell-training
 version:        0.1.0.0
@@ -28,6 +28,7 @@ source-repository head
 library
   hs-source-dirs:
       src
+  ghc-options: -Wall
   build-depends:
       base >=4.7 && <5
   exposed-modules:
@@ -47,8 +48,10 @@ test-suite haskell-training-test
       test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      QuickCheck
+    , base >=4.7 && <5
     , haskell-training
   other-modules:
+      Instances.MultipleInstancesSpec
       Paths_haskell_training
   default-language: Haskell2010

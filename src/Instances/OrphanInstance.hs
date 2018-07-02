@@ -1,3 +1,5 @@
+{-# OPTIONS_GHC -fno-warn-orphans #-}
+
 module Instances.OrphanInstance where
 
 import Instances.OrphanClass
