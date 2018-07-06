@@ -1,2 +1,1 @@
-main :: IO ()
-main = putStrLn ""
+{-# OPTIONS_GHC -F -pgmF hspec-discover #-}

@@ -1,12 +1,14 @@
 module Instances.MultipleInstancesSpec where
 
 import           Data.Monoid
-import           Test.QuickCheck
+import           Test.Hspec
+import           Test.Hspec.QuickCheck
 
 import           Instances.MultipleInstances
 
-
-compareSumIdentity a = SumType (0 :: Int) <> SumType a == mempty
-
-main :: IO ()
-main = quickCheck (withMaxSuccess 10000 compareSumIdentity)
+spec :: SpecWith ()
+spec =
+  describe "SumType Monoid" $ do
+    modifyMaxSuccess (const 1000) $
+      prop "identity" $
+        \a -> mempty <> SumType a == SumType a
